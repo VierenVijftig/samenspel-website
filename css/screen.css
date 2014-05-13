@@ -116,7 +116,7 @@ li {
 }
 
 #loading h1 {
-  font-size: 220px;
+  font-size: 100px;
   margin: 90px auto 117px;
   font-weight: 600;
 }
@@ -278,7 +278,7 @@ input[type="text"] {
 }
 
 .sidebartitle h1{ 
-  font-size: 100px;
+  font-size: 60px;
   color: #fff;
   margin: 30px 0px 0px 50px;
   text-align: left;
@@ -330,12 +330,6 @@ input[type="text"] {
   background-size:cover;
   background-position:center;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bike.jpg', sizingMethod='scale')";
-}
-.pagebg.imagechicagocityhall{ 
-  background: url("../img/chicago_cityhall.jpg");
-  background-size:cover;
-  background-position:center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/chicago_cityhall.jpg', sizingMethod='scale')";
 }
 .pagebg.imagebigdata2{ 
   background: url("../img/big_data2.jpg");

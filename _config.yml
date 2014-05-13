@@ -1,4 +1,12 @@
+# Site settings
+title: SamenSpel Team Collaboration Platform
+email: hello@vierenvijftig.nl
+description: "SamenSpel is a Team Collaboration Platform for professionals working in the neighbourhood."
+baseurl: ""
+url: "http://www.samenspel.net"
+
+#Build settings
 markdown: rdiscount
-pygments: true
+highlighter: pygments
 paginate: 100
 permalink: pretty

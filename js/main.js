@@ -1,39 +1,15 @@
 var cityLocations = [{
-    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2011" }
+    "geometry": { "type": "Point", "coordinates": [52.36578, 4.85495]},
+    "properties": { "city": "columbusplein", "year": "2013" }
 },  {
-    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011" }
+    "geometry": { "type": "Point", "coordinates": [52.37971, 4.85896]},
+    "properties": { "city": "Buurt Praktijk Team Landlust", "year": "2011" }
 }, {
-    "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "city": "seattle", "year": "2011" }
+    "geometry": { "type": "Point", "coordinates": [52.38093, 4.84687]},
+    "properties": { "city": "Buurt Praktijk Team Bosleeuw", "year": "2011" }
 }, {
-    "geometry": { "type": "Point", "coordinates": [-122.4183, 37.7750]},
-    "properties": { "city": "sanfrancisco", "year":"2011" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-83.6365, 32.8398]},
-    "properties": { "city": "macon", "year":"2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
-    "properties": { "city": "santacruz", "year":"2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "city": "chicago", "year":"2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
-    "properties": { "city": "honolulu", "year":"2012" }
-},{
-    "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
-    "properties": { "city": "neworleans", "year":"2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "city": "austin", "year":"2012" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
-    "properties": { "city": "detroit", "year":"2012" }
+    "geometry": { "type": "Point", "coordinates": [52.38997, 4.87802]},
+    "properties": { "city": "Team SpaandammerBuurt", "year":"2014" }
 }];
 
 var color2011 = "fedd44",
@@ -215,33 +191,33 @@ $(function(){
 
   }, function(){});
   var arrowInterval =0;
-  var mapcurrentyear = "2011";
+  var mapcurrentyear = "2013";
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
 
-    if($(el).attr("class").indexOf("fellowship2011") >= 0){
-      $(".yeartitle h1").css("color","#"+color2011).text("2011");
-      $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
-      mapcurrentyear = "2011";
-      interaction.hideTooltips();
-      displayedMarkers = [];
-      markerLayer.filter(function(f) {
-        return f.properties['year'] === '2011';
-      });
+    // if($(el).attr("class").indexOf("fellowship2011") >= 0){
+    //   $(".yeartitle h1").css("color","#"+color2011).text("2011");
+    //   $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
+    //   mapcurrentyear = "2011";
+    //   interaction.hideTooltips();
+    //   displayedMarkers = [];
+    //   markerLayer.filter(function(f) {
+    //     return f.properties['year'] === '2011';
+    //   });
 
-      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+    //   map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
-      //setTimeout(showRandomTooltip, 1200);
+    //   //setTimeout(showRandomTooltip, 1200);
 
-    }
+    // }
     
-    if($(el).attr("class").indexOf("fellowship2012") >= 0){
-      $(".yeartitle h1").css("color","#"+color2012).text("2012");
+    if($(el).attr("class").indexOf("fellowship2013") >= 0){
+      $(".yeartitle h1").css("color","#"+color2012).text("2013");
       $(".yeartitle h2").css("color","#"+color2012).text("The Fellowship");
-      mapcurrentyear = "2012";
+      mapcurrentyear = "2013";
       interaction.hideTooltips();
       displayedMarkers = [];
       markerLayer.filter(function(f) {
-        return f.properties['year'] === '2012';
+        return f.properties['year'] === '2013';
       });
       
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
@@ -263,9 +239,9 @@ $(function(){
 
     if(mapcurrentyear === "2011"){
      $("html body").animate({
-        scrollTop: $("div.fellowship2012.mapscroll").offset().top
+        scrollTop: $("div.fellowship2013.mapscroll").offset().top
       }, 1500);
-    }else if(mapcurrentyear === "2012"){
+    }else if(mapcurrentyear === "2013"){
       $("html body").animate({
         scrollTop: $("div.story div.cityLeaders").offset().top - 20
       }, 1500);
@@ -357,12 +333,12 @@ $(function(){
 
 
   // Create map
-  var layer = mapbox.layer().id('dmt.map-cdkzgmkx');
+  var layer = mapbox.layer().id('maggix.i7npi59p');
 
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
-  map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
+  map.centerzoom({lat: 52.373056, lon: 4.892222 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
